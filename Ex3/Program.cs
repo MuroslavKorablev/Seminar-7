@@ -13,9 +13,11 @@ int columns = WorkWithUser("Введите кол-во столбцов: ");
 int minValue = WorkWithUser("Введите минимальное значение: ");
 int maxValue = WorkWithUser("Введите максимальное значение: ");
 int[,] array = GetArray(rows, columns, minValue, maxValue + 1);
+System.Console.WriteLine("Оригинальная матрица:");
 PrintArray(array);
+System.Console.WriteLine("Измененная матрица:");
 TransformEvenIndicesToSquares(array);
-
+System.Console.WriteLine();
 
 int WorkWithUser(string message)
 {
@@ -48,7 +50,6 @@ void PrintArray(int[,] inArray)
         }
         System.Console.WriteLine();
     }
-    System.Console.WriteLine();
 }
 
 void TransformEvenIndicesToSquares(int[,] inArr)
